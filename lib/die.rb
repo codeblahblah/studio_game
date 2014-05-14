@@ -1,7 +1,12 @@
 class Die
+  attr_reader :number
 
-  def self.roll
-    rand(6) +1
+  def initialize
+    roll
+  end
+
+  def roll
+    @number = rand(6) + 1
   end
   
 end
