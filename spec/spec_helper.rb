@@ -1,4 +1,5 @@
 require_relative '../lib/clumsy_player'
+require_relative '../lib/berserk_player'
 require_relative '../lib/game'
 require_relative '../lib/player'
 require_relative '../lib/playable'
