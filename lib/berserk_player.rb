@@ -12,12 +12,12 @@ class BerserkPlayer < Player
   end
 
   def w00t
-    @w00t_count += 1 if !berserk?
     super
+    @w00t_count += 1
+    puts "#{@name} is berserk!" if berserk?
   end
 
   def blam
-    return w00t if berserk? 
-    super
+    berserk? ? w00t : super
   end
 end
