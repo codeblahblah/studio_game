@@ -35,7 +35,7 @@ class Player
   end
 
   def strong?
-    @health > 100 ? true : false
+    @health > 100
   end
 
   def to_s
