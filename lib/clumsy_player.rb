@@ -8,19 +8,14 @@ class ClumsyPlayer < Player
     @boost_factor = boost_factor
   end
 
-  def points
-    @points = super() / 2
-  end
-
-  def each_found_treasure
-    @found_treasures.each do |name, points|
-      yield Treasure.new(name, (points/2))
-    end
+  def found_treasure(treasure)
+    damaged_treasure = Treasure.new(treasure.name, treasure.points / 2)
+    super (damaged_treasure)
   end
 
   def w00t
     boost_factor.times do
-      @health += 15
+     super 
     end
   end
 end

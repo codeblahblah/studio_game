@@ -1,13 +1,15 @@
+require_relative 'playable'
+
 class Player
   include Comparable
+  include Playable
+
   attr_reader :name, :health
 
   def initialize(name, health = 150)
     @name = name.capitalize
     @health = health
-    @strong = true
     @found_treasures = Hash.new(0)
-    @points = 0
   end
 
   def <=> (other)
